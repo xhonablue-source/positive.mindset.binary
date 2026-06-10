@@ -221,9 +221,9 @@ st.components.v1.html("""
     border-radius: 6px;
     transition: all 0.15s;
   }
-  .switch-pip.top    { background: #4CAF50; }
-  .switch-pip.top.off { background: #D1FAE5; border: 1px solid #A7F3D0; }
-  .switch-pip.bottom  { background: #D1FAE5; border: 1px solid #A7F3D0; }
+  .switch-pip.top     { background: #EF4444; }
+  .switch-pip.top.off { background: #EF4444; border: none; }
+  .switch-pip.bottom  { background: #FCA5A5; border: 1px solid #FCA5A5; }
   .switch-pip.bottom.on { background: #4CAF50; border: none; }
 
   .bit-display {
@@ -233,7 +233,7 @@ st.components.v1.html("""
     transition: color 0.15s;
   }
   .bit-display.on  { color: #4CAF50; }
-  .bit-display.off { color: #CBD5E1; }
+  .bit-display.off { color: #EF4444; }
 
   .certainty-tag {
     font-size: 9px;
@@ -272,13 +272,18 @@ st.components.v1.html("""
     transform: translateX(-50%);
     top: 10px;
     box-shadow: 0 4px 12px rgba(76,175,80,0.35);
+    transition: background 0.15s, box-shadow 0.15s;
+  }
+  .ball.hit {
+    background: radial-gradient(circle at 35% 35%, #FCA5A5, #EF4444);
+    box-shadow: 0 4px 12px rgba(239,68,68,0.45);
   }
   .impact-ring {
     position: absolute;
     bottom: 3px; left: 50%;
     transform: translateX(-50%) scale(0);
     width: 40px; height: 12px;
-    border: 2px solid #4CAF50;
+    border: 2px solid #EF4444;
     border-radius: 50%;
     opacity: 0;
   }
@@ -476,6 +481,7 @@ st.components.v1.html("""
     setTimeout(() => {
       ball.style.transition = 'all 0.08s';
       ball.style.transform = 'translateX(-50%) scaleX(1.5) scaleY(0.5)';
+      ball.classList.add('hit');
       ring.style.transition = 'transform 0.4s ease-out, opacity 0.4s ease-out';
       ring.style.transform = 'translateX(-50%) scale(3)';
       ring.style.opacity = '1';
@@ -487,6 +493,7 @@ st.components.v1.html("""
       ring.style.transform = 'translateX(-50%) scale(0)';
       hint.style.opacity = '1';
       ball.style.top = '10px';
+      ball.classList.remove('hit');
       dropping = false;
     }, 1100);
   }
