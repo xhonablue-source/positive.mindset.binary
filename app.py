@@ -156,7 +156,7 @@ st.components.v1.html("""
 <head>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { background: transparent; font-family: 'Inter', 'Segoe UI', sans-serif; }
+  html, body { background: transparent; font-family: 'Inter', 'Segoe UI', sans-serif; overflow: hidden; height: auto; }
 
   .demo-wrapper {
     display: grid;
@@ -515,7 +515,7 @@ st.components.v1.html("""
 </script>
 </body>
 </html>
-""", height=540, scrolling=False)
+""", height=520, scrolling=False)
 
 st.markdown('</div>', unsafe_allow_html=True)
 
