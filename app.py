@@ -136,9 +136,9 @@ st.markdown('</div>', unsafe_allow_html=True)
 # ═══════════════════════════════════════════════════════════════════════════════
 # BINARY ACTION — Interactive concept section (replaces Dr. X chat + journal)
 # ═══════════════════════════════════════════════════════════════════════════════
-st.markdown('<div class="card">', unsafe_allow_html=True)
-st.markdown('<h2 class="section-header">⚡ Binary Action — Not All 1s Are the Same</h2>', unsafe_allow_html=True)
 st.markdown("""
+<div class="card">
+<h2 class="section-header">⚡ Binary Action — Not All 1s Are the Same</h2>
 <p style='font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;'>
     In physics, binary is <strong>certain</strong>. A switch is on or off. An object hits the ground or it doesn't.
     No interpretation. No doubt.<br><br>
@@ -148,6 +148,7 @@ st.markdown("""
     acting even when your knowledge state is still 0.
     That move, from uncertainty into action, is where real learning lives.
 </p>
+</div>
 """, unsafe_allow_html=True)
 
 st.components.v1.html("""
