@@ -517,8 +517,6 @@ st.components.v1.html("""
 </html>
 """, height=520, scrolling=False)
 
-st.markdown('</div>', unsafe_allow_html=True)
-
 # --- Grow Your Brain Section ---
 st.markdown('<div class="card">', unsafe_allow_html=True)
 st.markdown('<h2 class="section-header">Grow Your Brain, Shape Your Future!</h2>', unsafe_allow_html=True)
