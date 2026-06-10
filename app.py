@@ -136,28 +136,36 @@ st.markdown('</div>', unsafe_allow_html=True)
 # ═══════════════════════════════════════════════════════════════════════════════
 # BINARY ACTION — Interactive concept section (replaces Dr. X chat + journal)
 # ═══════════════════════════════════════════════════════════════════════════════
-st.markdown("""
-<div class="card">
-<h2 class="section-header">⚡ Binary Action — Not All 1s Are the Same</h2>
-<p style='font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;'>
-    In physics, binary is <strong>certain</strong>. A switch is on or off. An object hits the ground or it doesn't.
-    No interpretation. No doubt.<br><br>
-    But <em>knowledge</em> isn't a switch. You can mark yourself a 1 and still be wrong.
-    You can mark yourself a 0 and be closer than you think.<br><br>
-    <strong>Binary Action</strong> is what happens in that gap —
-    acting even when your knowledge state is still 0.
-    That move, from uncertainty into action, is where real learning lives.
-</p>
-</div>
-""", unsafe_allow_html=True)
-
 st.components.v1.html("""
 <!DOCTYPE html>
 <html>
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  html, body { background: transparent; font-family: 'Inter', 'Segoe UI', sans-serif; overflow: hidden; height: auto; }
+  html, body { background: #F8F7F4; font-family: 'Inter', 'Segoe UI', sans-serif; overflow: hidden; }
+  .outer-card {
+    background: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid #E0E0E0;
+    padding: 1.5rem;
+    margin-bottom: 0;
+  }
+  .section-header {
+    color: #005A9C;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #E0E0E0;
+    padding-bottom: 0.5rem;
+  }
+  .intro-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1.25rem;
+  }
 
   .demo-wrapper {
     display: grid;
@@ -385,6 +393,9 @@ st.components.v1.html("""
 </style>
 </head>
 <body>
+<div class="outer-card">
+<div class="section-header">⚡ Binary Action — Not All 1s Are the Same</div>
+<p class="intro-text">In physics, binary is <strong>certain</strong>. A switch is on or off. An object hits the ground or it doesn't. No interpretation. No doubt.<br><br>But <em>knowledge</em> isn't a switch. You can mark yourself a 1 and still be wrong. You can mark yourself a 0 and be closer than you think.<br><br><strong>Binary Action</strong> is what happens in that gap — acting even when your knowledge state is still 0. That move, from uncertainty into action, is where real learning lives.</p>
 <div class="demo-wrapper">
 
   <!-- SWITCH -->
@@ -514,9 +525,10 @@ st.components.v1.html("""
     document.getElementById('meterFuzz').style.opacity = val >= 0.85 ? '1' : '0.3';
   }
 </script>
+</div>
 </body>
 </html>
-""", height=520, scrolling=False)
+""", height=720, scrolling=False)
 
 # --- Grow Your Brain Section ---
 st.markdown('<div class="card">', unsafe_allow_html=True)
